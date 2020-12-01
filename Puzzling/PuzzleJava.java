@@ -78,7 +78,34 @@ public class PuzzleJava{
 
         Collections.sort(resRandos);
         
+        System.out.println(resRandos); 
+        System.out.println("The minimum value is: " + resRandos.get(0)); 
+        System.out.println("The maximum value is: " + resRandos.get(resRandos.size()-1)); 
         
 
+    }; 
+
+    public static String randomString(){
+        char[] chars = new char[5]; 
+        Random random = new Random(); 
+        String res = ""; 
+
+        for(int i = 0; i < 5; i++){
+            chars[i] = (char) ('a' + random.nextInt(26)); 
+            res += chars[i]; 
+        }; 
+
+        return res; 
+
+    };
+
+    public static ArrayList<String> arrayOfStrings(){
+        ArrayList<String> result = new ArrayList<String>(); 
+
+        for(int i = 0; i <= 10; i++){
+            result.add(PuzzleJava.randomString()); 
+        }; 
+
+        return result; 
     }; 
 }
